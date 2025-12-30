@@ -36,7 +36,7 @@ A domain-specific language (DSL) compiler for matrix operations, built with Flex
 flex matrix.l
 bison -dy matrix.y
 gcc lex.yy.c y.tab.c -o matrix_compiler
-./matrix_compiler < test1.txt
+matrix_compiler < test1.txt
 ```
 
 Or use the provided script:
