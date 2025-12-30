@@ -1,0 +1,22 @@
+// 2x3 matrix
+matrix A(2, 3) = [
+  1, 2, 3,
+  4, 5, 6
+];
+
+// 3x2 matrix
+matrix B(3, 2) = [
+  7, 8,
+  9, 1,
+  2, 3
+];
+
+// Multiply: (2x3) * (3x2) = (2x2)
+C = A * B;
+
+// Transpose
+AT = transpose(A);  // 3x2 matrix
+BT = transpose(B);  // 2x3 matrix
+
+// Now we can do: AT * BT
+result = AT * BT;   // (3x2) * (2x3) = (3x3)

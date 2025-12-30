@@ -1,0 +1,132 @@
+// ==========================================
+// 1. Matrix Declaration
+// ==========================================
+
+// 2x2 matrix for basic operations
+matrix A(2, 2) = [ 4, 1, 2, 3 ];
+
+// 3x3 identity matrix
+matrix B(3, 3) = [ 
+  1, 0, 0, 
+  0, 1, 0, 
+  0, 0, 1 
+];
+
+// Rectangular matrices for multiplication
+matrix C(2, 3) = [ 
+  1, 2, 3, 
+  4, 5, 6 
+];
+
+matrix D(3, 2) = [ 
+  7, 8, 
+  9, 1, 
+  2, 3 
+];
+
+// 3x3 matrix for advanced operations
+matrix E(3, 3) = [
+  4, 1, 2,
+  1, 5, 3,
+  2, 3, 6
+];
+
+// 4x4 matrix for testing larger matrices
+matrix F(4, 4) = [
+  5, 2, 1, 1,
+  2, 6, 2, 1,
+  1, 2, 7, 2,
+  1, 1, 2, 8
+];
+
+// ==========================================
+// 2. Basic Arithmetic Operations
+// ==========================================
+
+// Addition: 3x3 + 3x3
+Sum = B + B;
+
+// Subtraction: 2x2 - 2x2
+Diff = A - A;
+
+// ==========================================
+// 3. Matrix Multiplication and Transpose
+// ==========================================
+
+// Rectangular multiplication: (2x3) * (3x2) -> (2x2)
+RectMul = C * D;
+
+// Transpose: 2x3 -> 3x2
+TransC = transpose(C);
+
+// ==========================================
+// 4. Determinant (now supports NxN)
+// ==========================================
+
+// 2x2 determinant
+det(A);
+
+// 3x3 determinant
+det(E);
+
+// 4x4 determinant
+det(F);
+
+// ==========================================
+// 5. Matrix Inverse (now supports NxN)
+// ==========================================
+
+// 2x2 inverse
+invA = inverse(A);
+
+// Verify: A * invA should be identity
+checkA = A * invA;
+
+// 3x3 inverse
+invE = inverse(E);
+
+// Verify: E * invE should be identity
+checkE = E * invE;
+
+// 4x4 inverse
+invF = inverse(F);
+
+// ==========================================
+// 6. Eigenvalues and Eigenvectors (NxN)
+// ==========================================
+
+// Note: Power iteration finds dominant eigenvalue/eigenvector
+
+// 2x2 eigenvalue
+eigenval(A);
+
+// 2x2 eigenvector
+eigenvec(A);
+
+// 3x3 eigenvalue
+eigenval(E);
+
+// 3x3 eigenvector
+eigenvec(E);
+
+// 4x4 eigenvalue
+eigenval(F);
+
+// 4x4 eigenvector
+eigenvec(F);
+
+// ==========================================
+// 7. Trace (supports any square matrix)
+// ==========================================
+
+// 2x2 trace
+trace(A);
+
+// 3x3 trace
+trace(B);
+
+// 3x3 trace
+trace(E);
+
+// 4x4 trace
+trace(F);
