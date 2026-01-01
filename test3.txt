@@ -1,41 +1,11 @@
-matrix A(2, 2) = [
-  4, 1,
-  2, 3
+matrix M(3, 3) = [
+2, -1, 0,
+-1, 2, -1,
+0, -1, 2
 ];
 
-matrix B(3, 3) = [ 
-  1, 0, 0, 
-  0, 1, 0, 
-  0, 0, 1 
-];
-
-matrix C(2, 3) = [ 
-  1, 2, 3, 
-  4, 5, 6 
-];
-
-matrix D(3, 2) = [ 
-  7, 8, 
-  9, 1, 
-  2, 3 
-];
-
-// Simple parentheses
-result = (A);
-
-// Control priority
-result = (A + B) * C;
-
-// Complex nesting
-result = (A + B) * (C - D);
-
-// Mixing with functions
-result = (A + B) * transpose(C);
-result = transpose((A + B) * C);
-
-// Original example
-result = (A + B) * transpose(A - B);
-
-// More complex expressions
-result = inverse((A + B)) * transpose(C);
-result = (transpose(A) + B) * (C - D);
+det(M);
+trace(M);
+eigenval(M);
+eigenvec(M);
+invM = inverse(M);
