@@ -578,6 +578,7 @@ expr:
 
 number:
     NUMBER { $$ = $1; }
+| '-' NUMBER { $$ = -$2; }
 ;
 
 %%
@@ -611,4 +612,5 @@ int yyerror(const char* s) {
 
 int main(void) {
     return yyparse();
+
 }
